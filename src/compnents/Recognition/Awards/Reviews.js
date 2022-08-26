@@ -12,7 +12,7 @@ const Reviews = () => {
                     <p className='reviewer'>--KP(Application Development Senior Analyst)</p>
                     <p>Abhinav worked on major functionalities and picked up the pace very quickly. He is good at handeling pressure and always stretched whenever required.</p>
                     <p className='reviewer'>--RK(Application Development Team Lead)</p>
-                    <p>Being your junior, I am inspired by your dedication and your passion for work. I am perticularly impressed by yoru ability to provide high attention to details without compromising on speed. The knowledge and professional skills you have, are amazing and love the way you apply logic by using smarter approaches instead complex ones. Also, I can see amazing leadership qualities in you. Keep up the good work and also thanks for guiding me when needed.</p>
+                    <p>Being your junior, I am inspired by your dedication and your passion for work. I am particularly impressed by your ability to provide high attention to details without compromising on speed. The knowledge and professional skills you have, are amazing and love the way you apply logic by using smarter approaches instead complex ones. Also, I can see amazing leadership qualities in you. Keep up the good work and also thanks for guiding me when needed.</p>
                     <p className='reviewer'>--SKN(Application Development Analyst)</p>
                 </div>
             </div>
