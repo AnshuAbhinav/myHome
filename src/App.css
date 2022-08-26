@@ -1,38 +1,130 @@
+.voiceAssist{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  border: 1px solid #3EB489;
+  background: #FFF;
+  z-index: 9;
+  border-radius: 50%;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+}
+
+.voiceAssist:hover{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition: all 0.5s
+}
+
+.voiceControls{
+  position: absolute;
+  bottom: 4rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  text-decoration: none;
+  padding: 1rem;
+  background: #3EB489;
+  width: 4rem;
+  float: right;
+  height: 100vh;
+  overflow-x: hidden;
+  transition: width 1s;
+}
+
+.App:hover{
+  width: 10rem;
+  overflow: visible;
+}
+
+.headerWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.links{
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.headerDiv{
+  color: #FFF;
+  background: #3EB489;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 50%;
+}
+
+.iconWrapper{
+  position: absolute; 
+  width: 100%;
+  background:#3EB489;
+  cursor: pointer;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerWrapper:hover .iconWrapper{
+  transition: all 1s;
+  transform: translateX(-6rem);
+  border: 3px solid white;
+  z-index: 9;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.headerWrapper:hover .headerDiv{
+  transition: transform 1s;
+  transform: translateX(1.4rem);
+  z-index: 9;
+  height: 7rem;
+  width: 7rem;
+}
+
+.iconColor{
   color: white;
+  border-radius: 50%;
+  transform: scale(1.2);
 }
 
-.App-link {
-  color: #61dafb;
+.headerWrapper:hover .iconColor{
+  /* box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+  10px 10px 15px rgba(70,70,70,0.12); */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transform: scale(1.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.listening{
+  animation: listen 2s infinite;
+}
+
+@keyframes listen{
+  0%{
+    color: #3EB489
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    color: orange
+  }
+  100%{
+    color: #0A192F
   }
 }
