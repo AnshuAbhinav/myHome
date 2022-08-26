@@ -1,7 +1,7 @@
 {
   "name": "voice-assistance",
   "version": "0.1.0",
-  "homepage": "https://AnshuAbhinav.github.io/",
+  "homepage": "https://AnshuAbhinav.github.io/myPage",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.0",
