@@ -1,0 +1,30 @@
+.recognitionMobileRoot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+
+.iconWrapperMobile{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1rem;
+}
+
+.icons{
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    right: 65%;
+}
+
+.recognitionMobileDetails{
+    padding: 1rem;
+    height: calc(100vh - 12rem);
+    overflow-y: scroll;
+}

@@ -2,8 +2,8 @@ import React from 'react';
 
 const BestTeam = () => {
     return(
-        <div>
-            <div className='header'>Best Team</div>
+        <div  className='header'>
+            <div>Best Team</div>
             <p className='awardDetails'>Received Best Team award for being a team player, supportive, working toward the overall development of the team and being available whenever required.</p>
             <div className='awardDetails'>
                 <li>04 Jun 2018</li>

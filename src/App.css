@@ -1,4 +1,4 @@
-.voiceAssist{
+.voiceAssist {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
@@ -15,16 +15,25 @@
   width: 2rem;
 }
 
-.voiceAssist:hover{
+.voiceAssist:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   transition: all 0.5s
 }
 
-.voiceControls{
+.voiceControls {
   position: absolute;
   bottom: 4rem;
   right: 1rem;
   cursor: pointer;
+}
+
+.appRoot {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(10, 25, 47, 0.85)
 }
 
 .App {
@@ -36,31 +45,31 @@
   text-decoration: none;
   padding: 1rem;
   background: #3EB489;
-  width: 4rem;
+  width: 6rem;
   float: right;
   height: 100vh;
   overflow-x: hidden;
   transition: width 1s;
 }
 
-.App:hover{
+.App:hover {
   width: 10rem;
   overflow: visible;
 }
 
-.headerWrapper{
+.headerWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
 
-.links{
+.links {
   text-decoration: none;
   margin-top: 1rem;
 }
 
-.headerDiv{
+.headerDiv {
   color: #FFF;
   background: #3EB489;
   height: 4rem;
@@ -71,10 +80,26 @@
   border-radius: 50%;
 }
 
-.iconWrapper{
-  position: absolute; 
+.selectedHeaderDiv{
+  color: #FFF;
+  background: #3EB489;
+  /* height: 4rem;
+  width: 4rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 1s;
+  /* transform: translateX(1.4rem); */
+  z-index: 9;
+  height: 7rem;
+  width: 7rem;
+}
+
+.iconWrapper {
+  position: absolute;
   width: 100%;
-  background:#3EB489;
+  background: #3EB489;
   cursor: pointer;
   height: 6rem;
   width: 6rem;
@@ -84,7 +109,26 @@
   justify-content: center;
 }
 
-.headerWrapper:hover .iconWrapper{
+.selectedIconWrapper {
+  position: absolute;
+  width: 100%;
+  background: #3EB489;
+  cursor: pointer;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: all 1s;
+  /* transform: translateX(-6rem); */
+  border: 3px solid white;
+  z-index: 9;
+  box-shadow: rgba(0, 0, 0, 0.3) inset 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.headerWrapper:hover .iconWrapper {
   transition: all 1s;
   transform: translateX(-6rem);
   border: 3px solid white;
@@ -92,7 +136,7 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-.headerWrapper:hover .headerDiv{
+.headerWrapper:hover .headerDiv {
   transition: transform 1s;
   transform: translateX(1.4rem);
   z-index: 9;
@@ -100,31 +144,133 @@
   width: 7rem;
 }
 
-.iconColor{
+.iconColor {
   color: white;
   border-radius: 50%;
   transform: scale(1.2);
 }
 
-.headerWrapper:hover .iconColor{
+.iconSelected {
+  color: orange;
+}
+
+.headerWrapper:hover .iconColor {
   /* box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
   10px 10px 15px rgba(70,70,70,0.12); */
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   transform: scale(1.2);
 }
 
-.listening{
+.listening {
   animation: listen 2s infinite;
 }
 
-@keyframes listen{
-  0%{
+.addIcon {
+  /* display: none; */
+  position: absolute;
+  bottom: 5rem;
+  right: 50%;
+}
+
+@keyframes listen {
+  0% {
     color: #3EB489
   }
-  50%{
+
+  50% {
     color: orange
   }
-  100%{
+
+  100% {
     color: #0A192F
   }
+}
+
+@media(max-width: 768px) {
+
+  .voiceAssist {
+    bottom: 2rem;
+  }
+  .App {
+    float: bottom;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    transition: none;
+    position: static;
+    bottom: 0;
+  }
+
+  .App:hover {
+    /* height: 10rem; */
+    width: 100%;
+    overflow: visible;
+  }
+
+  .appRoot {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .headerDiv, .selectedHeaderDiv{
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .iconWrapper {
+    height: 3rem;
+    width: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+  .iconColor {
+    transform: scale(none);
+    border-radius: 8px;
+  }
+
+  .desktopView {
+    display: none;
+  }
+
+  .headerWrapper:hover .iconWrapper {
+    transition: all 1s;
+    transform: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+  .headerWrapper:hover .headerDiv {
+    transition: transform 1s;
+    transform: none;
+    z-index: 9;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .headerWrapper:hover .iconColor {
+    box-shadow: none;
+    transform: scale(none);
+  }
+
+  .links {
+    text-decoration: none;
+    margin-top: 0;
+  }
+
+  .selectedIconWrapper {
+    height: 3rem;
+    width: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.3) inset 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+
 }

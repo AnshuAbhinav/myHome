@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
     flex-direction: row;
     width: 100%;
     color: white;
@@ -120,5 +120,23 @@
         /* transform: scale(0);
         transform: translate(0%); */
         transform: rotate(275deg);
+    }
+}
+
+@media(max-width: 768px){
+    .contentWrapper{
+        width: 100%;
+    }
+
+    .detail{
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 376px){
+    .rootDiv{
+        align-items: center;
+        height: 100vh;
+        overflow-y: scroll;
     }
 }

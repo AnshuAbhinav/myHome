@@ -2,14 +2,15 @@ import React from 'react';
 
 const Certifications = () => {
     return(
-        <div>
-            <div className='header'>Certifications</div>
+        <div  className='header'>
+            <div>Certifications</div>
+            <p className='awardDetails'>Earned certifications:</p>
             <div className='awardDetails'>
-                <div>Microsoft Azure Fundamentals(AZ900)</div>
-                <div>Microsoft Power Platform Fundamentals(PL900)</div>
-                <div>Microsoft Security, Compliance, and Identity Fundamentals(SC900)</div>
-                <div>ITIL V2 certified</div>
-                <div>Gold Medalist(BCA), Patna University, Batch of 2016</div>
+                <li>Microsoft Azure Fundamentals(AZ900)</li>
+                <li>Microsoft Power Platform Fundamentals(PL900)</li>
+                <li>Microsoft Security, Compliance, and Identity Fundamentals(SC900)</li>
+                <li>ITIL V2 certified</li>
+                <li>Gold Medalist(BCA), Patna University, Batch of 2016</li>
             </div>
         </div>
     )

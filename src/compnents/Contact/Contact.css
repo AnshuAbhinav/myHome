@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 .form {
@@ -80,4 +81,16 @@
     height: 2.2rem;
     padding: 1rem;
     color: orange;
+}
+
+@media(max-width: 768px){
+    .form svg{
+        height: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    .form input, textarea{
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
 }

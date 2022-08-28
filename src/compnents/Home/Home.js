@@ -13,12 +13,14 @@ const Home = () => {
             <div className='introHome'>
                 <div>Hii! I am</div>
                 <div className='nameDiv'>Abhinav Anshu</div>
-                <div>I am a Front-End Developer and currently working as </div>
-                <div className='desingation'>Application Development Software Analyst in </div>
+                <div style={{fontSize: '1.3rem'}}>I am a Front-End Developer and currently working as </div>
+                <div className='desingation'>Application Development Senior Analyst </div>in
                 <div className='nameDiv companyDiv'>Accenture India (ATCI) </div>
                 <div className='experience'>I have 5 years of working experience in:</div>
-                <div>UNIX, SQL, Abinitio Tools, Service Now, Autosys</div>
-                <div className='experience'>React, HTML, JAVASCRIPT, CSS, Material UI</div>
+                <div>
+                    <div className='experience'>UNIX, SQL, Abinitio Tools, Service Now, Autosys</div>
+                    <div className='experience'>React, HTML, JAVASCRIPT, CSS, Material UI</div>
+                </div>
                 <Grid container className='iconsGrid'>
                     <Grid item xs={3}>
                         <Link href='https://www.linkedin.com/in/abhinav-anshu-aa672113b/' target="_blank">
