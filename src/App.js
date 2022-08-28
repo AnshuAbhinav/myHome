@@ -28,16 +28,16 @@ function App() {
       <BrowserRouter>
         <div className='App'>
           <div className='headerWrapper' >
-            <Link className='links' to="/">
-              <div className={selected === "/" ? 'selectedHeaderDiv' : 'headerDiv'} onClick={() => navigationHandler('/')}>
+            <Link className='links' to="/myHome">
+              <div className={(selected === "/myHome") || (selected === "/") ? 'selectedHeaderDiv' : 'headerDiv'} onClick={() => navigationHandler('/myHome')}>
                 <div className='desktopView'>Home</div>
-                <div className={selected === "/" ? 'selectedIconWrapper' : 'iconWrapper'}><HouseIcon className={'iconColor'} /></div>
+                <div className={(selected === "/myHome") || (selected === "/") ? 'selectedIconWrapper' : 'iconWrapper'}><HouseIcon className={'iconColor'} /></div>
               </div>
             </Link>
           </div>
           <div className='headerWrapper'>
             <Link className='links' to="/about">
-              <div className={selected === "about" ? 'selectedHeaderDiv' : 'headerDiv'}  onClick={() => navigationHandler('about')}>
+              <div className={selected === "about" ? 'selectedHeaderDiv' : 'headerDiv'} onClick={() => navigationHandler('about')}>
                 <div className='desktopView'>About</div>
                 <div className={selected === "about" ? 'selectedIconWrapper' : 'iconWrapper'}><CastForEducationIcon className={'iconColor'} /></div>
               </div>
@@ -63,7 +63,8 @@ function App() {
           </div>
         </div>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route exact path='/' element={<Home />} />
+          <Route path='/myHome' element={<Home />} />
           <Route path='/about' element={<AboutMe />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='recognition' element={<MyRecongition />} />
