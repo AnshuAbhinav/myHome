@@ -75,6 +75,7 @@
     margin-bottom: 3rem;
     border-radius: 8px;
     box-shadow: inset 7px 5px 12px rgb(225 225 225 / 12%), inset -13px -13px 20px rgb(70 70 70 / 12%) ;
+    width: 100%;
 }
 
 .form svg{
