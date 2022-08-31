@@ -44,7 +44,6 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </div>
-            {/* <div>Image</div> */}
         </div>
     )
 }
